@@ -271,8 +271,168 @@ function res_country() {
 
 }
 
+// Register Dietary Type Custom Taxonomy
+function res_dietary_types() {
+
+    $labels = array(
+        'name'                       => 'Dietary Types',
+        'singular_name'              => 'Dietary Type',
+        'menu_name'                  => 'Dietary Type',
+        'all_items'                  => 'All Dietary Types',
+        'parent_item'                => 'Parent Dietary Type',
+        'parent_item_colon'          => 'Parent Dietary Type:',
+        'new_item_name'              => 'New Dietary Type',
+        'add_new_item'               => 'Add New Dietary Type',
+        'edit_item'                  => 'Edit Dietary Type',
+        'update_item'                => 'Update Dietary Type',
+        'view_item'                  => 'View Dietary Type',
+        'separate_items_with_commas' => 'Separate dietary types with commas',
+        'add_or_remove_items'        => 'Add or remove dietary types',
+        'choose_from_most_used'      => 'Choose from the most used',
+        'popular_items'              => 'Popular Dietary Types',
+        'search_items'               => 'Search Dietary Types',
+        'not_found'                  => 'Not Found',
+        'no_terms'                   => 'No dietary types',
+        'items_list'                 => 'Dietary Types list',
+        'items_list_navigation'      => 'Dietary Types list navigation',
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'show_in_rest'               => true,
+    );
+    register_taxonomy( 'Dietary Type', array( 'ac_recipes', 'ac_vendors', 'ac_restaurants' ), $args );
+
+}
+
+// Register Service Type Custom Taxonomy
+function ven_service_types() {
+
+    $labels = array(
+        'name'                       => 'Service Types',
+        'singular_name'              => 'Service Type',
+        'menu_name'                  => 'Service Type',
+        'all_items'                  => 'All Service Types',
+        'parent_item'                => 'Parent Service Type',
+        'parent_item_colon'          => 'Parent Service Type:',
+        'new_item_name'              => 'New Service Type',
+        'add_new_item'               => 'Add New Service Type',
+        'edit_item'                  => 'Edit Service Type',
+        'update_item'                => 'Update Service Type',
+        'view_item'                  => 'View Service Type',
+        'separate_items_with_commas' => 'Separate service types with commas',
+        'add_or_remove_items'        => 'Add or remove service types',
+        'choose_from_most_used'      => 'Choose from the most used',
+        'popular_items'              => 'Popular Service Types',
+        'search_items'               => 'Search Service Types',
+        'not_found'                  => 'Not Found',
+        'no_terms'                   => 'No service types',
+        'items_list'                 => 'Service Types list',
+        'items_list_navigation'      => 'Service Types list navigation',
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'show_in_rest'               => true,
+    );
+    register_taxonomy( 'Service Type', array( 'ac_vendors' ), $args );
+
+}
+
+// Register Venue Type Custom Taxonomy
+function ven_venue_types() {
+
+    $labels = array(
+        'name'                       => 'Venue Types',
+        'singular_name'              => 'Venue Type',
+        'menu_name'                  => 'Venue Type',
+        'all_items'                  => 'All Venue Types',
+        'parent_item'                => 'Parent Venue Type',
+        'parent_item_colon'          => 'Parent Venue Type:',
+        'new_item_name'              => 'New Venue Type',
+        'add_new_item'               => 'Add New Venue Type',
+        'edit_item'                  => 'Edit Venue Type',
+        'update_item'                => 'Update Venue Type',
+        'view_item'                  => 'View Venue Type',
+        'separate_items_with_commas' => 'Separate venue types with commas',
+        'add_or_remove_items'        => 'Add or remove venue types',
+        'choose_from_most_used'      => 'Choose from the most used',
+        'popular_items'              => 'Popular Venue Types',
+        'search_items'               => 'Search Venue Types',
+        'not_found'                  => 'Not Found',
+        'no_terms'                   => 'No venue types',
+        'items_list'                 => 'Venue Types list',
+        'items_list_navigation'      => 'Venue Types list navigation',
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'show_in_rest'               => true,
+    );
+    register_taxonomy( 'Venue Type', array( 'ac_clubs' ), $args );
+
+}
+
+// Register Music Type Custom Taxonomy
+function ven_music_types() {
+
+    $labels = array(
+        'name'                       => 'Music Types',
+        'singular_name'              => 'Music Type',
+        'menu_name'                  => 'Music Type',
+        'all_items'                  => 'All Music Types',
+        'parent_item'                => 'Parent Music Type',
+        'parent_item_colon'          => 'Parent Music Type:',
+        'new_item_name'              => 'New Music Type',
+        'add_new_item'               => 'Add New Music Type',
+        'edit_item'                  => 'Edit Music Type',
+        'update_item'                => 'Update Music Type',
+        'view_item'                  => 'View Music Type',
+        'separate_items_with_commas' => 'Separate music types with commas',
+        'add_or_remove_items'        => 'Add or remove music types',
+        'choose_from_most_used'      => 'Choose from the most used',
+        'popular_items'              => 'Popular Music Types',
+        'search_items'               => 'Search Music Types',
+        'not_found'                  => 'Not Found',
+        'no_terms'                   => 'No music types',
+        'items_list'                 => 'Music Types list',
+        'items_list_navigation'      => 'Music Types list navigation',
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'show_in_rest'               => true,
+    );
+    register_taxonomy( 'Music Type', array( 'ac_clubs' ), $args );
+
+}
+
 add_action( 'init', 'ac_restaurants', 0 );
 add_action( 'init', 'ac_vendors', 0 );
 add_action( 'init', 'ac_recipes', 0 );
 add_action( 'init', 'ac_clubs', 0 );
 add_action( 'init', 'res_country', 0 );
+add_action( 'init', 'res_dietary_types', 0 );
+add_action( 'init', 'ven_dietary_types', 0 );
+add_action( 'init', 'ven_venue_types', 0 );
+add_action( 'init', 'ven_music_types', 0 );
